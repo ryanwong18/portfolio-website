@@ -1,22 +1,507 @@
 @import "./partials/setup";
 @import "./partials/variables";
+@import "./partials/mixin";
 
+//setting font-size default
 html {
     font-size:10px;
 }
 
+//setting default font-family, changes will be made from variables partial
 body {
     font-family:sans-serif;
 }
 
+//setting wrapper on overall content
 .wrapper {
     margin:0 auto;
-    max-width:1000px;
+    max-width:1100px;
 }
 
-.hero-image {
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/hero-image.jpg");
+//HEADER SECTION
+header {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/hero-image.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    min-height:90vh;
+    height:100vh;
+    position:relative;
+
+    nav {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height:100px;
+
+        .drop-down-off {
+            color:$title-color;
+            font-size:2rem;
+            display:none;
+        }
+
+        .drop-down-on {
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .logo-disappear {
+            display:none;
+        }
+
+        div.hamburger-off {
+            display:none;
+        }
+
+        .x-off {
+            display:none;
+        }
+
+        .x-on {
+            display:flex;
+            color:$title-color;
+            font-size:2rem;
+        }
+    }
+
+    .logo {
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3 {
+        color:$title-color;
+        font-size:2.5rem;
+        font-weight:400;
+        letter-spacing:0.3rem;
+    }
+
+    span {
+        display:inline-block;
+        position:absolute;
+        top:52px;
+        left:32px;
+    }
+
+    ul {
+        display:flex;
+        margin:0;
+        align-items: center;
+    }
+
+    li {
+        color:$title-color;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        padding:10px 20px;
+        font-size:$navfontsize;
+        font-family:$header-font;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-weight:600;
+    }
+
+    a:hover {
+        color:$nav-hover-color;
+    }
+
+    .title {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        min-height:calc(100vh - 100px);
+            
+        h1 {
+            color:$title-color;
+            margin-top:0;
+            font-size:$h1fontsize;
+            font-family:$title-font;
+            letter-spacing: 0.3rem;
+        }
+
+        h2 {
+            color:$title-color;
+            font-size:$h2fontsize;
+            font-family:$title-font;
+            letter-spacing: 0.2rem;
+        }
+    }
+
+    a {
+        text-decoration:none;
+        color:$title-color;
+    }
+
+    .line {
+        height:100px;
+        border-right:2px solid $text-color;
+        width:0px;
+        position:absolute;
+        bottom:-50px;
+        left:50%;
+    }
+}
+
+// //MAIN SECTION - FRONT PAGE
+main {    
+    section {
+        margin-bottom:100px;
+    }
+
+    .about {
+        padding-top:100px;
+        .wrapper {
+            display:flex;
+            justify-content: space-around;
+        }
+
+        .my-picture {
+            width:35%;
+        }
+
+        .my-description {
+            width:50%;
+        }
+        
+        img {
+            width:100%;
+        }
+
+        h2 {
+            color:$heading-color;
+            margin-top:0;
+            margin-bottom:30px;
+            font-size:$h2fontsize;  
+            font-family:$title-font;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            color:$text-color;
+            font-size:$h4fontsize;
+            font-weight:400;
+            line-height:2.5rem;
+            margin:20px 0;
+            font-family:$text-font;
+        }
+    }
+
+    .portfolio-grid {
+        background-color: $portfolio-grid-background;
+        padding-top:100px;
+        padding-bottom:100px;
+        position:relative;
+
+        .line-portfolio {
+           border-right:2px solid $text-color;
+           height:100px;
+           width:0px;
+           position:absolute;
+           top:-50px;
+           left:50%;
+
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom:100px;
+            margin-top:0;
+            font-size:$h2fontsize;
+            font-family:$title-font;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom:50px;
+            margin-top:0;
+            font-size:$h3fontsize;
+            font-family:$title-font;
+            text-transform:uppercase;
+        }
+
+        h4 {
+            margin-bottom:50px;
+            margin-top:0;
+            font-size:$h4fontsize;
+            line-height:2.5rem;
+            font-weight:400;
+            width:80%;
+            font-family:$text-font;
+            color:$text-color;
+        }
+
+        .grid1, .grid2, .grid3 {
+            display:flex;
+        }
+
+        .portfolio-desc h4:nth-of-type(2) {
+            text-align: center;
+        }
+
+        span {
+            font-weight:bold;
+            color:$span-color;
+            font-size:$span-font-size;
+            font-family:$text-font;
+        }
+
+        .grid1, .grid2 {
+            margin-bottom:50px;
+        }
+
+        img {
+            width:100%;
+        }
+
+        .buttons {
+            display:flex;
+            justify-content: center;
+        }
+
+        .buttons a {
+            @include button();
+            margin-right:10px;
+        }
+
+        .buttons a:hover {
+            background-color:$button-hover-color;
+        }
+
+        .buttons a:nth-of-type(2) {
+            margin-right:0;
+        }
+
+        .portfolio-image, .portfolio-desc {
+            width:50%;
+        }
+
+        .portfolio-desc {
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skills-line {
+           border-right:2px solid $text-color;
+           height:100px;
+           width:0px;
+           position:absolute;
+           bottom:-50px;
+           left:50%;
+
+        }
+
+    }
+
+    .skills-images {
+        .icons {
+            display:flex;
+            justify-content: space-around;
+            font-size:$iconfontsize;
+            margin-top:100px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size:$h2fontsize;
+            margin-top:0;
+            font-family:$title-font;
+            text-transform: uppercase;
+        }
+    }
+   
+}
+
+
+//FOOTER SECTION
+footer {
+    background-color:$footer-background-color;
+    padding-top:100px;
+    padding-bottom:100px;
+
+    h2 {
+        color:$title-color;
+        font-size:$h2fontsize;
+        text-transform: uppercase;
+        font-family:$title-font;
+        margin-top:0;
+        margin-bottom:30px;
+        text-align: center;
+    }
+
+    ul {
+        margin-top:0;
+        margin-bottom:0;
+        display:flex;
+        justify-content: center;
+    }
+    
+    li {
+        list-style: none;
+        padding-right:30px;
+    }
+
+    .footer-icons {
+        a {
+            font-size:$socialiconfontsize;
+            color:$footer-icons-color;
+        }
+        a:hover {
+            color:$nav-hover-color;
+        }
+    }
+    
+    .email {
+        color:$title-color;
+        text-align: center;
+        margin-bottom:30px;
+        a {
+            text-decoration:none;
+            font-size:$h4fontsize;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
+
+//MEDIA QUERIES
+
+@media (max-width:1150px) {
+    .wrapper {
+        max-width:900px;
+    }
+
+    main .about .my-picture {
+        width:50%;
+    }
+
+    main .about .my-description {
+        width:40%
+    }
+}
+
+@media (max-width:950px) {
+    main .about .my-picture {
+        display:none;
+    }
+
+    main .about h4 {
+        text-align: center;
+    }
+
+    main .about .my-description {
+        width:80%
+    }
+
+    main .about h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    .wrapper {
+        max-width:768px;
+    }
+
+    main .about .my-picture {
+        width:0;
+    }
+}
+
+@media (max-width:800px) {
+    .wrapper {
+        max-width:650px;
+    }
+
+    main .portfolio-grid .grid1, main .portfolio-grid .grid3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .portfolio-grid .portfolio-image, main .portfolio-grid .portfolio-desc {
+        width:100%;
+    }
+
+    main .portfolio-grid .grid2 {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    main .portfolio-grid .portfolio-desc {
+        margin-top:50px;
+    }
+}
+
+@media (max-width:750px) {
+    .wrapper {
+        max-width:600px;
+    }
+}
+
+@media (max-width:650px) {
+    header nav .drop-down-off {
+        display:block;
+        margin-right:30px;
+    }
+
+    header ul {
+        display:none;
+    }
+
+    header .logo {
+        margin-left:30px;
+    }
+
+    header .x-off {
+        margin-right:30px;
+    }
+
+    header .title h1 {
+        font-size:5rem;
+    }
+
+    header .title h2 {
+        font-size:2.5rem;
+    }
+
+    main .skills-images .icons {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        height:150px;
+    }
+}
+
+@media (max-width:550px) {
+    header nav .drop-down-on {
+        flex-direction:column;   
+        margin-top:20px;
+        margin-left:30%;
+    }
+
+    header li {
+        margin-bottom:20px;
+    }
+
+    header .x-off {
+        margin-right:20%;
+    }
+
+    header .title {
+        justify-content: flex-start;
+        margin-top:150px;
+    }
+}
+
+@media (max-width:440px) {
+    header nav .drop-down-on {
+        margin-left:20%;
+    }
+
+    header .x-off {
+        margin-right:20%;
+    }
 }

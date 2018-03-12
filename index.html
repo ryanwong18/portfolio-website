@@ -9,32 +9,150 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <!-- Throw design image here -->
-            <a href="">Placeholder for image</a>
+    <header class="hero-image">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    <!-- Throw design icon here -->
+                    <h3>&ltR<span>W&gt</span></h3>
+                </div>
+                <ul class="nav-bar">
+                    <li><a href="#about" class="about-nav">About</a></li>
+                    <li><a href="#portfolio" class="portfolio-nav">Portfolio</a></li>
+                    <li><a href="#skills" class="skills-nav">Skills</a></li>
+                    <li><a href="#contact" class="contact-nav">Contact</a></li>
+                </ul>
+                <div class="drop-down-off"><i class="fas fa-bars"></i></div>
+                <div class="x-off"><i class="fas fa-times"></i></div>
+            </nav>
+            <div class="title">
+                <h1>Ryan Wong</h1>
+                <h2>Front-End Developer</h2>
+            </div>
+            <div class="line"></div>
         </div>
-        <ul>
-            <li>About</li>
-            <li>Portfolio</li>
-            <li>Skills</li>
-            <li>Contact</li>
-        </ul>
     </header>
 
     <main>
-        <section class="hero-image">
-            <h1>Ryan Wong</h1>
-            <h2>Front-End Developer</h2>
+        <section class="about" id="about">
+            <div class="wrapper">
+                <div class="my-picture">
+                    <img src="styles/images/profile-pic.jpg" alt="picture of me in a chair"> 
+                </div>
+                <div class="my-description">
+                    <h2>About Me</h2>
+                    <h4>Hey there, I'm Ryan!</h4>
+                    <h4>Originally from Calgary, the Rocky Mountains were a landmark of my early life, but in 2015 I packed my bags and moved to Toronto. The CN Tower is now what I wake up to every morning - not too shabby!</h4>
+                    <h4> Holding to my roots, I continue to enjoy hiking and camping when the opportunities arise, but I've also come to appreciate the diversity of experiences that Toronto has to offer. In my spare time, I also enjoy reading and playing
+                    a variety of sports.</h4>
+                    <h4>Before becoming a Front-End Developer, I spent four years in the Oil & Gas industry as a Professional Engineer and spent almost three years in Finance at a large Canadian financial institution. With a desire to continue learning, I recently completed the full-time bootcamp at HackerYou. </h4>
+                    <h4>Coding is a new puzzle that I'm continuing to solve and it challenges both my creativity and analytical ability. JavaScript and React are the reasons I get up in the morning, but they are also the reasons I took up coffee again!</h4>
+                </div>
+            </div>
         </section>
 
-        <section class="about"> 
-            <h2></h2>
+        
+        <section class="portfolio-grid" id="portfolio"> 
+            <div class="line-portfolio"></div>
+            <div class="wrapper">
+                <h2>Portfolio Projects</h2>
+                <div class="grid1">
+                    <div class="portfolio-image"> 
+                        <!-- image of portfolio 1 -->
+                        <img src="styles/images/betsy-portfolio.png" alt="">
+                    </div>
+                    <div class="portfolio-desc">
+                        <h3>Baby Shower Registry</h3>
+                        <h4>Betsy is an application which allows hosts to build a registry using items from the Etsy API. Guests can find registries and reserve items they would like to purchase.</h4>
+                        <h4><span>React / Firebase / JavaScript / API / Sass</span></h4>
+                        <div class="buttons">
+                            <a href="https://baby-registry-b41ed.firebaseapp.com/" target="_blank">View Live</a>
+                            <a href="https://github.com/ryanwong18/baby-shower-app" target="_blank">View Github</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="grid2">
+                    <div class="portfolio-desc">
+                        <h3>Horoscope Generator</h3>
+                        <h4>Not sure what the stars are saying about you? Take the quiz to find out your zodiac sign and based on your responses, all will be revealed!</h4>
+                        <h4><span>JavaScript / jQuery / Sass / HTML5</span>
+                        </h4>
+                        <div class="buttons">
+                            <a href="http://ryanwongonline.com/horoscope" target="_blank">View Live</a>
+                            <a href="https://github.com/ryanwong18/horoscope" target="_blank">View Github</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-image">
+                        <!-- image of portfolio 2 -->
+                        <img src="styles/images/horoscope-portfolio.png" alt="">
+                    </div>
+                </div>
+                <div class="grid3">
+                    <div class="portfolio-image">
+                        <!-- image of portfolio 3 -->
+                        <img src="styles/images/over-portfolio.png" alt="">
+                    </div>
+                    <div class="portfolio-desc">
+                        <h3>Over PSD Conversion</h3>
+                        <h4>This is a PSD to HTML conversion project which which was given during the HackerYou bootcamp. The website is fully responsive.</h4>
+                        <h4><span>HTML5 / CSS3</span></h4>
+                        <div class="buttons">
+                            <a href="http://ryanwongonline.com/over" target="_blank">View Live</a>
+                            <a href="https://github.com/ryanwong18/living-styling-with-plants" target="_blank">View Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-line"></div>
+        </section>
+        
+        <section class="skills-images" id="skills">
+            <div class="wrapper">
+                <h2>Skills & Tools</h2>
+                <div class="icons">
+                    <div>
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div>
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div>
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div>
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div>
+                        <i class="fab fa-sass"></i>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
+    
     <footer>
+        <h2>Contact</h2>
+        <section class="footer-icons" id="contact">
+            <div class="email">
+                <a href="mailto:ryan@ryanwongonline.com">ryan@ryanwongonline.com</a>
+            </div>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/ryanwong88/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/ryanwong18/" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href="https://twitter.com/ryanwong_code" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
 
+                </ul>
+            </div>
+        </section>
     </footer>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>  
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

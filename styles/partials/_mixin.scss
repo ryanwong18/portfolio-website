@@ -1,0 +1,13 @@
+//mixin for buttons
+@mixin button() {
+    font-size:$buttonfontsize;
+    background-color:#AED581;
+    color:black;
+    text-transform:uppercase;
+    padding:10px 20px;
+    font-weight:600;
+    font-family:$text-font;
+    text-decoration:none;
+    border-radius:5px;
+    letter-spacing:0.1rem;
+}
