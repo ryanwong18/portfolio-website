@@ -116,6 +116,7 @@ header {
         h1 {
             color:$title-color;
             margin-top:0;
+            margin-bottom:25px;
             font-size:$h1fontsize;
             font-family:$title-font;
             letter-spacing: 0.3rem;
@@ -126,6 +127,7 @@ header {
             font-size:$h2fontsize;
             font-family:$title-font;
             letter-spacing: 0.2rem;
+            margin-top:0;
         }
     }
 

@@ -210,14 +210,16 @@ header {
     header .title h1 {
       color: #f2f2f2;
       margin-top: 0;
-      font-size: 6rem;
+      margin-bottom: 25px;
+      font-size: 8rem;
       font-family: "Oswald", sans-serif;
       letter-spacing: 0.3rem; }
     header .title h2 {
       color: #f2f2f2;
       font-size: 3.5rem;
       font-family: "Oswald", sans-serif;
-      letter-spacing: 0.2rem; }
+      letter-spacing: 0.2rem;
+      margin-top: 0; }
   header a {
     text-decoration: none;
     color: #f2f2f2; }
