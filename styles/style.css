@@ -423,7 +423,9 @@ footer {
     flex-direction: column-reverse;
     align-items: center; }
   main .portfolio-grid .portfolio-desc {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  main .portfolio-grid h4 {
+    text-align: center; } }
 
 @media (max-width: 750px) {
   .wrapper {
@@ -458,9 +460,22 @@ footer {
     margin-bottom: 20px; }
   header .x-off {
     margin-right: 20%; }
-  header .title {
-    justify-content: flex-start;
-    margin-top: 150px; } }
+  header {
+    position: relative; }
+  header .title h1 {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  header .title h2 {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); } }
 
 @media (max-width: 440px) {
   header nav .drop-down-on {
