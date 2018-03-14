@@ -152,6 +152,8 @@ header {
     justify-content: space-between;
     align-items: center;
     min-height: 100px; }
+    header nav a {
+      border-bottom: 1px solid transparent; }
     header nav .drop-down-off {
       color: #f2f2f2;
       font-size: 2rem;
@@ -200,7 +202,8 @@ header {
     letter-spacing: 0.1rem;
     font-weight: 600; }
   header a:hover {
-    color: #BDBDBD; }
+    color: #9E9E9E;
+    border-bottom: 1px solid #9E9E9E; }
   header .title {
     display: flex;
     flex-direction: column;
@@ -240,7 +243,7 @@ main .about {
     display: flex;
     justify-content: space-around; }
   main .about .my-picture {
-    width: 35%; }
+    width: 30%; }
   main .about .my-description {
     width: 50%; }
   main .about img {
@@ -294,14 +297,15 @@ main .portfolio-grid {
     font-weight: 400;
     width: 80%;
     font-family: "Open Sans", sans-serif;
-    color: #666666; }
+    color: #666666;
+    text-align: center; }
+  main .portfolio-grid h4:nth-of-type(2) {
+    text-align: left; }
   main .portfolio-grid .grid1, main .portfolio-grid .grid2, main .portfolio-grid .grid3 {
     display: flex; }
-  main .portfolio-grid .portfolio-desc h4:nth-of-type(2) {
-    text-align: center; }
   main .portfolio-grid span {
     font-weight: bold;
-    color: blue;
+    color: black;
     font-size: 2rem;
     font-family: "Open Sans", sans-serif; }
   main .portfolio-grid .grid1, main .portfolio-grid .grid2 {
@@ -313,7 +317,7 @@ main .portfolio-grid {
     justify-content: center; }
   main .portfolio-grid .buttons a {
     font-size: 1.5rem;
-    background-color: #AED581;
+    background-color: #80CBC4;
     color: black;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -324,7 +328,7 @@ main .portfolio-grid {
     letter-spacing: 0.1rem;
     margin-right: 10px; }
   main .portfolio-grid .buttons a:hover {
-    background-color: #7CB342; }
+    background-color: #26A69A; }
   main .portfolio-grid .buttons a:nth-of-type(2) {
     margin-right: 0; }
   main .portfolio-grid .portfolio-image, main .portfolio-grid .portfolio-desc {
@@ -346,7 +350,16 @@ main .skills-images .icons {
   display: flex;
   justify-content: space-around;
   font-size: 5rem;
-  margin-top: 100px; }
+  margin-top: 100px;
+  flex-wrap: wrap; }
+  main .skills-images .icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px; }
+
+main .skills-images h5 {
+  font-size: 1.3rem; }
 
 main .skills-images h2 {
   text-align: center;
@@ -379,7 +392,7 @@ footer {
     font-size: 2.5rem;
     color: #f2f2f2; }
   footer .footer-icons a:hover {
-    color: #BDBDBD; }
+    color: #9E9E9E; }
   footer .email {
     color: #f2f2f2;
     text-align: center;
@@ -393,29 +406,35 @@ footer {
   .wrapper {
     max-width: 900px; }
   main .about .my-picture {
-    width: 50%; }
-  main .about .my-description {
-    width: 40%; } }
+    width: 40%;
+    margin-right: 30px; } }
 
 @media (max-width: 950px) {
-  main .about .my-picture {
-    display: none; }
   main .about h4 {
-    text-align: center; }
-  main .about .my-description {
-    width: 80%; }
+    text-align: left; }
   main .about h2 {
-    text-align: center; } }
+    text-align: left; } }
 
 @media (max-width: 900px) {
   .wrapper {
     max-width: 768px; }
+  main .about h4 {
+    font-size: 1.3rem;
+    line-height: 2.3rem; }
   main .about .my-picture {
-    width: 0; } }
+    width: 45%;
+    margin-right: 30px; } }
 
 @media (max-width: 800px) {
   .wrapper {
     max-width: 650px; }
+  main .about .my-picture {
+    display: none; }
+  main .about .my-description {
+    text-align: center;
+    width: 70%; }
+  main .about h4, main .about h2 {
+    text-align: center; }
   main .portfolio-grid .grid1, main .portfolio-grid .grid3 {
     flex-direction: column;
     align-items: center; }
@@ -426,6 +445,8 @@ footer {
     align-items: center; }
   main .portfolio-grid .portfolio-desc {
     margin-top: 50px; }
+  main .portfolio-grid h4:nth-of-type(2) {
+    text-align: center; }
   main .portfolio-grid h4 {
     text-align: center; } }
 
@@ -446,12 +467,7 @@ footer {
   header .title h1 {
     font-size: 5rem; }
   header .title h2 {
-    font-size: 2.5rem; }
-  main .skills-images .icons {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 150px; } }
+    font-size: 2.5rem; } }
 
 @media (max-width: 550px) {
   header nav .drop-down-on {
@@ -468,14 +484,14 @@ footer {
     position: absolute;
     width: 80%;
     text-align: center;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%); }
   header .title h2 {
     position: absolute;
     width: 80%;
     text-align: center;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%); } }
 

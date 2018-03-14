@@ -32,6 +32,10 @@ header {
         align-items: center;
         min-height:100px;
 
+        a {
+            border-bottom:1px solid transparent;
+        }
+
         .drop-down-off {
             color:$title-color;
             font-size:2rem;
@@ -104,6 +108,7 @@ header {
 
     a:hover {
         color:$nav-hover-color;
+        border-bottom:1px solid $nav-hover-color;
     }
 
     .title {
@@ -160,7 +165,7 @@ main {
         }
 
         .my-picture {
-            width:35%;
+            width:30%;
         }
 
         .my-description {
@@ -233,14 +238,15 @@ main {
             width:80%;
             font-family:$text-font;
             color:$text-color;
+            text-align:center;
+        }
+
+        h4:nth-of-type(2) {
+            text-align:left;
         }
 
         .grid1, .grid2, .grid3 {
             display:flex;
-        }
-
-        .portfolio-desc h4:nth-of-type(2) {
-            text-align: center;
         }
 
         span {
@@ -305,6 +311,18 @@ main {
             justify-content: space-around;
             font-size:$iconfontsize;
             margin-top:100px;
+            flex-wrap:wrap;
+            div {
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                min-width:100px;
+            }
+        }
+
+
+        h5 {
+            font-size:1.3rem;
         }
 
         h2 {
@@ -377,29 +395,18 @@ footer {
     }
 
     main .about .my-picture {
-        width:50%;
-    }
-
-    main .about .my-description {
-        width:40%
+        width:40%;
+        margin-right:30px;
     }
 }
 
 @media (max-width:950px) {
-    main .about .my-picture {
-        display:none;
-    }
-
     main .about h4 {
-        text-align: center;
-    }
-
-    main .about .my-description {
-        width:80%
+        text-align: left;
     }
 
     main .about h2 {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -408,14 +415,33 @@ footer {
         max-width:768px;
     }
 
+    main .about h4 {
+        font-size:1.3rem;
+        line-height:2.3rem;
+    }
+
     main .about .my-picture {
-        width:0;
+        width:45%;
+        margin-right:30px;
     }
 }
 
 @media (max-width:800px) {
     .wrapper {
         max-width:650px;
+    }
+
+    main .about .my-picture {
+        display:none;
+    }
+
+    main .about .my-description {
+        text-align: center;
+        width:70%;
+    }
+
+    main .about h4, main .about h2 {
+        text-align: center;
     }
 
     main .portfolio-grid .grid1, main .portfolio-grid .grid3 {
@@ -434,6 +460,10 @@ footer {
 
     main .portfolio-grid .portfolio-desc {
         margin-top:50px;
+    }
+
+    main .portfolio-grid h4:nth-of-type(2) {
+        text-align: center;
     }
 
     main .portfolio-grid h4 {
@@ -473,12 +503,6 @@ footer {
         font-size:2.5rem;
     }
 
-    main .skills-images .icons {
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        height:150px;
-    }
 }
 
 @media (max-width:550px) {
@@ -504,7 +528,7 @@ footer {
         position:absolute;
         width:80%;
         text-align: center;
-        top:50%;
+        top:55%;
         left:50%;
         transform: translate(-50%, -50%);
     }
@@ -513,7 +537,7 @@ footer {
         position:absolute;
         width:80%;
         text-align: center;
-        top:60%;
+        top:65%;
         left:50%;
         transform: translate(-50%, -50%);
     }
